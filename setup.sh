@@ -26,12 +26,31 @@ fi
 c++ --version >/dev/null 2>&1 || Install g++
 make --version >/dev/null 2>&1 || Install make
 
-### Download/compile OpenShogiLib
+### Download OpenShogiLib (and test dependencies) then build it
 
 URL='http://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/trunk/osl/?view=tar'
 if [[ ! -d osl ]]; then
     wget -q -O - "$URL" | tar xzf -
 fi
 
-cd osl
-make
+GPS_URL='http://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/trunk/gpsshogi/?root=gpsshogi&view=tar'
+if [[ ! -d gpsshogi ]]; then
+    wget -q -O - "$GPS_URL" | tar xzf -
+fi
+
+DATA_URL='http://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/data/?view=tar'
+if [[ ! -d data ]]; then
+    wget -q -O - "$DATA_URL" | tar xzf -
+fi
+
+if [[ ! -f osl/full/osl/libosl_full.a ]]; then
+    make -C osl
+fi
+
+### Change ownership to run the tests
+
+for dir in */; do
+    if [[ -O $dir ]]; then
+        chown -R vagrant $dir
+    fi
+done

@@ -1,6 +1,7 @@
 # Purpose
 
-This small project shows how to successfully build the development version of
+This small project shows how to successfully build then test the development
+version of
 [OpenShogiLib](http://gps.tanaka.ecc.u-tokyo.ac.jp/gpsshogi/index.php?OpenShogiLib).
 
 Indeed it doesn't currently compile on Arch Linux 64-bit with latest updates.
@@ -17,5 +18,8 @@ Indeed it doesn't currently compile on Arch Linux 64-bit with latest updates.
       cd osl-vagrant/
 
     $ vagrant up
+      ./test.sh
+    [...]
+    *** No errors detected
 
 That's all folks!
