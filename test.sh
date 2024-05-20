@@ -7,5 +7,5 @@ set -e
 cd osl
 
 [[ -h data ]] || ln -s ../gpsshogi/data .
-[[ -h public-data ]] || ln -s ../data public-data .
+[[ -h public-data ]] || ln -s ../data public-data
 make run-test
