@@ -2,13 +2,13 @@
 
 This small project shows how to successfully build then test the development
 version of
-[OpenShogiLib](http://gps.tanaka.ecc.u-tokyo.ac.jp/gpsshogi/index.php?OpenShogiLib).
+[OpenShogiLib](https://gps.tanaka.ecc.u-tokyo.ac.jp/gpsshogi/index.php?OpenShogiLib).
 
 Indeed it doesn't currently compile on Arch Linux 64-bit with latest updates.
 
 # Requirements
 
-* [Git](http://git-scm.com/)
+* [Git](https://git-scm.com/)
 * [Vagrant](https://www.vagrantup.com/) 1.5+
 
 # Walkthrough

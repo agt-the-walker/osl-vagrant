@@ -28,17 +28,17 @@ make --version >/dev/null 2>&1 || Install make
 
 ### Download OpenShogiLib (and test dependencies) then build it
 
-URL='http://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/trunk/osl/?view=tar'
+URL='https://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/trunk/osl/?view=tar'
 if [[ ! -d osl ]]; then
     wget -q -O - "$URL" | tar xzf -
 fi
 
-GPS_URL='http://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/trunk/gpsshogi/?root=gpsshogi&view=tar'
+GPS_URL='https://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/trunk/gpsshogi/?root=gpsshogi&view=tar'
 if [[ ! -d gpsshogi ]]; then
     wget -q -O - "$GPS_URL" | tar xzf -
 fi
 
-DATA_URL='http://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/data/?view=tar'
+DATA_URL='https://gps.tanaka.ecc.u-tokyo.ac.jp/cgi-bin/viewvc.cgi/data/?view=tar'
 if [[ ! -d data ]]; then
     wget -q -O - "$DATA_URL" | tar xzf -
 fi
