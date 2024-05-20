@@ -10,7 +10,7 @@ function Install {
         apt-get update
         has_update_run=1
     fi
-    apt-get install -y $package
+    apt-get install -y "$package"
 }
 
 ### Check environment
@@ -51,6 +51,6 @@ fi
 
 for dir in */; do
     if [[ -O $dir ]]; then
-        chown -R vagrant $dir
+        chown -R vagrant "$dir"
     fi
 done
